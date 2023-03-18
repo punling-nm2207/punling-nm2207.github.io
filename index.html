@@ -1,16 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>My NM2207 GitHub Portfolio</title>
-    <script src="scripts/counter.js"></script>
-    <link rel="stylesheet" href="styles/styles.css" />
-  </head>
-  <body>
-    <h1>Hello world! 🚀</h1>
-    <h2>This is a site hosted on GitHub Pages.</h2>
-    <h3>Here's a hungry mouse. Please feed him!</h3>
-    <h3 class="mouse">🐁</h3>
-    <h3>Food counter: <span class="counter">0</span> 🥙</h3>
-    <button>Feed!</button>
-  </body>
+<head>
+    <link rel="stylesheet" type="text/css" href="appstyle.css">
+    <script defer type="text/javascript" src="appscript.js"></script>
+    <title>Strawberry Season</title>
+</head>
+
+ <body>
+<!-- Navigation bar adapted from: https://www.w3schools.com/howto/howto_js_topnav.asp-->
+<div class="navigation">
+   <a class="active" href="index.html">Home</a>
+   <a href="storyboard/storyboard.html">Storyboard</a>
+   <a href="references/references.html">References</a>
+</div>
+
+<!-- landing content-->
+<div class="landing">
+    <img src="resources/title.png"></a><br>
+    <!-- button will be updated with the function to move to open 'The Strawberry Story' when clicked-->
+    <button class="tellme">Where are my Strawberries?</button>
+</div>
+
+<!-- data -->
+<div class="data">
+
+    <!-- Tab links adapted from: https://www.w3schools.com/howto/howto_js_tabs.asp-->
+<div class="tab">
+    <button class="tablinks" onclick="openBerry(event, 'intro')">The Strawberry Story</button>
+    <button class="tablinks" onclick="openBerry(event, 'sgberry')">Strawberry Singapore</button>
+    <button class="tablinks" onclick="openBerry(event, 'festive')">Strawberry Festival</button>
+    <button class="tablinks" onclick="openBerry(event, 'exports')">Global Strawberry</button>
+  </div>
+  
+  <!-- Tab content -->
+  <div id="intro" class="tabcontent">
+    <h3>The Strawberry Story</h3>
+    <p>//information regarding strawberries and aim of website will be inserted here//
+    </p>
+    <p>What my project is about: Recently, it is strawberry season again in Singapore! I want to find out where
+      all the strawberries are and present this data in a couple of charts. 
+    </p>
+  </div>
+  
+  <div id="sgberry" class="tabcontent">
+    <h3>Singapore Strawberry</h3>
+    <p> A bar chart would be inserted here. The title is 'Strawberry Imports to Singapore(In KG)'. 
+      It will show the top 25 countries that Singapore imported strawberries from in 2021. 
+      This will be done with the Chart class and datasets array with data from https://wits.worldbank.org/trade/comtrade/en/country/SGP/year/2021/tradeflow/Imports/partner/ALL/product/081010#
+    </p>
+  </div>
+
+  <div id="festive" class="tabcontent">
+    <h3>Strawberry Festival</h3>
+    <p>A line chart would be inserted here. The title is 'Strawberrry production in Japan(in 1,000 metric tons).
+      It will show the volume of strawberries produced in Japan from 2011 to 2020 and its Yokohama Strawberry festival. This will be done
+      with the Chart class and datasets array with data from https://www-statista-com.libproxy1.nus.edu.sg/statistics/951046/japan-strawberry-production-volume/?locale=en
+    </p>
+    <p>
+      Link to the Yokohama Strawberry Festival website: https://www.yokohama-akarenga.jp/strawberryfes/
+    </p>
+  </div>
+
+  <div id="exports" class="tabcontent">
+    <h3>Global Strawberry</h3>
+    <p>A world bubble map will be inserted here. The title is 'Global Strawberry Exports for the year 2022(in USD)'.
+      It will show the trade value of the top 41 countries that export their strawberries.
+      I will be using d3.js to build this using this tutorial by https://d3-graph-gallery.com/graph/bubblemap_template.html.
+      The data is collected from https://wits.worldbank.org/trade/comtrade/en/country/All/year/2022/tradeflow/Exports/partner/WLD/product/081010#.
+     </p>
+  </div>
+
+</div>
+
+</body>
 </html>
