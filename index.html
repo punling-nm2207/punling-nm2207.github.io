@@ -1,75 +1,67 @@
 <!DOCTYPE html>
+
 <head>
-    <link rel="stylesheet" type="text/css" href="appstyle.css">
-    <script defer type="text/javascript" src="appscript.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/appstyle.css">
+    <script defer type="text/javascript" src="appscripts/appscript.js"></script>
     <title>Strawberry Season</title>
 </head>
 
- <body>
-<!-- Navigation bar adapted from: https://www.w3schools.com/howto/howto_js_topnav.asp-->
-<div class="navigation">
-   <a class="active" href="index.html">Home</a>
-   <a href="storyboard/storyboard.html">Storyboard</a>
-   <a href="references/references.html">References</a>
-</div>
+<body>
 
-<!-- landing content-->
-<div class="landing">
-    <img src="resources/title.png"></a><br>
-    <!-- button will be updated with the function to move to open 'The Strawberry Story' when clicked-->
-    <a href="resources/NM2207 Week 9 Submission.pdf"><button class="tellme">Project Document</button></a>
-</div>
+    <!-- Nav Bar, adapted from: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp-->
+    <div class="navbar">
+        <div class="header">
+            <a class="active" href="index.html">STRAWBERRY SEASON</a>
+        </div>
 
-<!-- data -->
-<div class="data">
+        <div class="header-right">
+            <a href="storyboard/storyboard.html">STORYBOARD</a>
+            <div class="dropdown">
+                <button class="dropbtn">WEEKLY DIARY
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="resources/NM2207 Week 9 Submission.pdf">Week 9</a>
+                    <a href="diary/week10.html">Week 10</a>
+                    <a href="diary/week11.html">Week 11</a>
+                    <a href="#">Week 12</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Tab links adapted from: https://www.w3schools.com/howto/howto_js_tabs.asp-->
-<div class="tab">
-    <button class="tablinks" onclick="openBerry(event, 'intro')">The Strawberry Story</button>
-    <button class="tablinks" onclick="openBerry(event, 'sgberry')">Strawberry Singapore</button>
-    <button class="tablinks" onclick="openBerry(event, 'festive')">Strawberry Festival</button>
-    <button class="tablinks" onclick="openBerry(event, 'exports')">Global Strawberry</button>
-  </div>
-  
-  <!-- Tab content -->
-  <div id="intro" class="tabcontent">
-    <h3>The Strawberry Story</h3>
-    <p>//information regarding strawberries and aim of website will be inserted here//
-    </p>
-    <p>What my project is about: Recently, it is strawberry season again in Singapore! I want to find out where
-      all the strawberries are and present this data in a couple of charts. 
-    </p>
-  </div>
-  
-  <div id="sgberry" class="tabcontent">
-    <h3>Singapore Strawberry</h3>
-    <p> A bar chart would be inserted here. The title is 'Strawberry Imports to Singapore(In KG)'. 
-      It will show the top 25 countries that Singapore imported strawberries from in 2021. 
-      This will be done with the Chart class and datasets array with data from https://wits.worldbank.org/trade/comtrade/en/country/SGP/year/2021/tradeflow/Imports/partner/ALL/product/081010#
-    </p>
-  </div>
 
-  <div id="festive" class="tabcontent">
-    <h3>Strawberry Festival</h3>
-    <p>A line chart would be inserted here. The title is 'Strawberrry production in Japan(in 1,000 metric tons).
-      It will show the volume of strawberries produced in Japan from 2011 to 2020 and its Yokohama Strawberry festival. This will be done
-      with the Chart class and datasets array with data from https://www-statista-com.libproxy1.nus.edu.sg/statistics/951046/japan-strawberry-production-volume/?locale=en
-    </p>
-    <p>
-      Link to the Yokohama Strawberry Festival website: https://www.yokohama-akarenga.jp/strawberryfes/
-    </p>
-  </div>
+    <div>
+        <img src="resources/headerimg.png">
+    </div>
 
-  <div id="exports" class="tabcontent">
-    <h3>Global Strawberry</h3>
-    <p>A world bubble map will be inserted here. The title is 'Global Strawberry Exports for the year 2022(in USD)'.
-      It will show the trade value of the top 41 countries that export their strawberries.
-      I will be using d3.js to build this using this tutorial by https://d3-graph-gallery.com/graph/bubblemap_template.html.
-      The data is collected from https://wits.worldbank.org/trade/comtrade/en/country/All/year/2022/tradeflow/Exports/partner/WLD/product/081010#.
-     </p>
-  </div>
+    <div class="details">
+        <img id="self" src="resources/selfimg.png">
+        <h1>Hi!! My name is Ling and I love Strawberries!</h1>
+        <p>Strawberries have always been known as a world-wide popular fruit and is eaten in many different forms all
+            over the world. In Singapore, it is no different.</p>
+        
+        <p>Recently, Singapore has put in effort to grow our own strawberries in vertical farms. But is that enough
+            to provide for our growing population? And what are the possible impacts of growing our own strawberries?</p>
+        
+        <p>I set to find out where our strawberries are coming from and how consumption of strawberries affects
+            the economy of the world.
+        </p>
+    </div>
 
-</div>
+    <div>
+        <button class="button">Let's Find Out!!</button>
+    </div>
+    
+    
+    <canvas id="kilochart" width="400" height="400"></canvas> <br><hr>
+    <canvas id="volchart" width="400" height="400"></canvas>
+    
+    <div class="details2">
+        <p>I have inserted two charts above but am facing an error right now so I will work to fix it!</p>
+    </div>
+
 
 </body>
+
 </html>
