@@ -2,7 +2,9 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="CSS/appstyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <script defer type="text/javascript" src="appscripts/appscript.js"></script>
+    <script src="path/to/chartjs/dist/chart.umd.js"></script>
     <title>Strawberry Season</title>
 </head>
 
@@ -15,7 +17,6 @@
         </div>
 
         <div class="header-right">
-            <a href="storyboard/storyboard.html">STORYBOARD</a>
             <div class="dropdown">
                 <button class="dropbtn">WEEKLY DIARY
                     <i class="fa fa-caret-down"></i>
@@ -24,7 +25,7 @@
                     <a href="resources/NM2207 Week 9 Submission.pdf">Week 9</a>
                     <a href="diary/week10.html">Week 10</a>
                     <a href="diary/week11.html">Week 11</a>
-                    <a href="#">Week 12</a>
+                    <a href="storyboard/storyboard.html">Week 12</a>
                 </div>
             </div>
         </div>
@@ -50,17 +51,16 @@
     </div>
 
     <div>
-        <button class="button">Let's Find Out!!</button>
+        <button class="button">Let's Find Out!!</button><br><br><br><hr><br>
     </div>
     
-    
-    <canvas id="kilochart" width="400" height="400"></canvas> <br><hr>
-    <canvas id="volchart" width="400" height="400"></canvas>
-    
-    <div class="details2">
-        <p>I have inserted two charts above but am facing an error right now so I will work to fix it!</p>
+    <div id="canvas-container">
+    <canvas id="kilochart" width="1000" height="400"></canvas>
     </div>
 
+    <div id="canvas-container">
+    <canvas id="volchart" width="1000" height="400"></canvas>
+   </div>
 
 </body>
 

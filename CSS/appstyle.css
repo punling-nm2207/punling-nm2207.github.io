@@ -165,3 +165,9 @@ img {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
+
+  #canvas-container {
+    position: relative;
+    height: 80%;
+    width: 80%;
+}
