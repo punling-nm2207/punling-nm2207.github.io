@@ -1,173 +1,483 @@
-body {
-    font-family: monospace;
-    background-color: #FFFBFC;
-}
-
-img {
-    padding: 0;
-    margin: 0;
-    display: grid;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100vh;
-    margin: auto;
-}
-
-.details {
-    padding: 2%;
-    margin: 2%;
-    height:max-content;
-}
-
-.details2 {
-    padding: 2%;
-    margin: 2%;
-    height:max-content;
-}
-
-#self {
-    float: right;
-    width: 20%;
-    margin-left: 2%;
-
-}
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background: #fff4df;
+      color: #b22e16;
+    }
 
 
-/*Navbar, adapted from: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
-
-/* Navbar container */
-.navbar {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #DA3E52;
-    width: 100%;
-}
-
-/* Links inside the navbar */
-.navbar a {
-    float: left;
-    font-size: 16px;
-    color: #FFFBFC;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-/* The dropdown container */
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-/* Dropdown button */
-.dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: #fff;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    /* Important for vertical align on mobile phones */
-    margin: 0;
-    /* Important for vertical align on mobile phones */
-}
-
-/* Add a red background color to navbar links on hover */
-.navbar a:hover,
-.dropdown:hover .dropbtn {
-    background-color: #5299D3;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Float the link section to the right */
-.header-right {
-    float: right;
-}
-
-/* adapted from https://www.w3schools.com/howto/howto_js_tabs.asp- */
-
-  /* Style the tab */
-  .tab {
-    overflow: hidden;
-    background-color: rgb(219,112,147);
-  }
-  
-  /* Style the buttons that are used to open the tab content */
-  .tab button {
-    float: left;
-    transition: 0.3s;
-  }
-  
-  /* Create an active/current tablink class */
-  .tab button.active {
-    background-color: rgb(255,192,203);
-    color: rgb(118, 31, 60);
-  }
-  
-  /* Style the tab content */
-  .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border-top: none;
-  }
+    img {
+      padding: 0;
+      margin: 0;
+      display: grid;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100vh;
+      margin: auto;
+    }
 
 
-  .button {
-    padding: 15px 25px;
-    font-size: 24px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #04AA6D;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-    position: absolute;
-    right: 45%;
-  }
-  
-  .button:hover {background-color: #3e8e41}
-  
-  .button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
+    #seasoninfo {
+      width: 70%;
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+      padding-bottom: 2%;
+    }
 
-  #canvas-container {
-    position: relative;
-    height: 80%;
-    width: 80%;
-}
+    #seasoninfo.fade-in {
+      opacity: 1;
+    }
+
+    #worldheader {
+      width: 60%;
+    }
+
+
+
+    #headerimg {
+      width: 90%;
+    }
+
+
+    .details {
+      padding: 2%;
+      margin: 2%;
+      margin-top: 5%;
+      height: max-content;
+      color: #fff;
+      background-color: #b22e16;
+      border-radius: 25px;
+    }
+
+    .details2 {
+      padding: 2%;
+      margin: 2%;
+      height: max-content;
+    }
+
+    #self {
+      float: right;
+      width: 20%;
+      margin-left: 2%;
+
+    }
+
+
+    /*Navbar, adapted from: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
+
+    /* Navbar container */
+    .navbar {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #1C7C54;
+      width: 100%;
+      border-radius: 25px;
+    }
+
+    /* Links inside the navbar */
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: #fff4df;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    /* The dropdown container */
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    /* Dropdown button */
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: #fff4df;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      /* Important for vertical align on mobile phones */
+      margin: 0;
+      /* Important for vertical align on mobile phones */
+    }
+
+    /* Add a red background color to navbar links on hover */
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: #E0479E;
+      color: #fff4df;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      float: none;
+      color: #1C7C54;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #E0479E;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Float the link section to the right */
+    .header-right {
+      float: right;
+    }
+
+    /* adapted from https://www.w3schools.com/howto/howto_js_tabs.asp- */
+
+    /* Style the tab */
+    .tab {
+      overflow: hidden;
+      background-color: rgb(219, 112, 147);
+    }
+
+    /* Style the buttons that are used to open the tab content */
+    .tab button {
+      float: left;
+      transition: 0.3s;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #04AA6D;
+      color: rgb(118, 31, 60);
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border-top: none;
+    }
+
+    /* End of Nav Bar */
+
+
+
+    /* slideshow adapted from https://www.w3schools.com/howto/howto_js_slideshow.asp*/
+
+    * {
+      box-sizing: border-box
+    }
+
+    .between {
+      text-align: center;
+    }
+
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 800px;
+      position: relative;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      height: 400px;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: #E0479E;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: #04AA6D;
+    }
+
+    /* Caption text */
+    .text {
+      color: #b22e16;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+      background-color: #fff4df;
+      background-size: 50%;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #04AA6D;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #b22e16;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    /* end of slideshow */
+
+
+
+    /* button to top, adapted from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
+    #myBtn {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Fixed/sticky position */
+      bottom: 20px;
+      /* Place the button at the bottom of the page */
+      right: 30px;
+      /* Place the button 30px from the right */
+      z-index: 99;
+      /* Make sure it does not overlap */
+      border: none;
+      /* Remove borders */
+      outline: none;
+      /* Remove outline */
+      background-color: #b22e16;
+      /* Set a background color */
+      color: white;
+      /* Text color */
+      cursor: pointer;
+      /* Add a mouse pointer on hover */
+      padding: 15px;
+      /* Some padding */
+      border-radius: 25px;
+      /* Rounded corners */
+      font-size: 18px;
+      /* Increase font size */
+    }
+
+    #myBtn:hover {
+      background-color: #E0479E;
+      /* Add a dark-grey background on hover */
+    }
+
+    /*button to top end */
+
+
+
+    /*button to reveal text, adapted from https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp */
+    button {
+      background-color: #b22e16;
+      /* Green */
+      border: none;
+      border-radius: 25cm;
+      color: #fff4df;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #E0479E;
+    }
+
+    .revealbtn {
+      text-align: center;
+    }
+    /* End of button to reveal text */
+
+
+    #myDIV {
+      padding: 2%;
+      margin: 4%;
+      height: max-content;
+      color: #fff4df;
+      background-color: #1C7C54;
+      border-radius: 25px;
+      border-style: solid;
+      border-width: 0.1cm;
+      border-color: #b22e16;
+      display: none;
+    }
+
+    #myDIV2 {
+      padding: 2%;
+      margin: 4%;
+      height: max-content;
+      color: #fff4df;
+      background-color: #1C7C54;
+      border-radius: 25px;
+      border-style: solid;
+      border-width: 0.1cm;
+      border-color: #b22e16;
+      display: none;
+    }
+
+    #myDIV3 {
+      padding: 2%;
+      margin: 4%;
+      height: max-content;
+      color: #fff4df;
+      background-color: #1C7C54;
+      border-radius: 25px;
+      border-style: solid;
+      border-width: 0.1cm;
+      border-color: #b22e16;
+      display: none;
+    }
+
+    #myDIV4 {
+      padding: 2%;
+      margin: 4%;
+      height: max-content;
+      color: #fff4df;
+      background-color: #1C7C54;
+      border-radius: 25px;
+      border-style: solid;
+      border-width: 0.1cm;
+      border-color: #b22e16;
+    }
+
+    #kilochart {
+      width: 1000px;
+      height: 800px;
+      background-color: #f9f9f9;
+      border: solid;
+      border-color: #b22e16;
+      margin: auto;
+      /* center horizontally */
+      border-radius: 25px;
+
+    }
+
+    #pieChart {
+      width: 800px;
+      background-color: #f9f9f9;
+      border: solid;
+      border-color: #b22e16;
+      border-radius: 25px;
+    }
+
+    .kilotext {
+      padding: 2%;
+      margin: 4%;
+      height: max-content;
+      color: #fff4df;
+      background-color: #1C7C54;
+      border-radius: 25px;
+      border-style: solid;
+      border-width: 0.1cm;
+      border-color: #b22e16;
+      margin-bottom: 5%;
+    }
+
+    #bubble-chart {
+      background-color: #f9f9f9;
+      border: solid;
+      border-color: #b22e16;
+      border-radius: 25px;
+    }
+
+
+    .parentgallery {
+      text-align: center;
+      width: 100%;
+    }
+
+    div.gallery {
+      margin: 2%;
+      border-radius: 25px;
+      border: 2px solid #b22e16;
+      color: #fff4df;
+      width: 300px;
+      display: inline-block;
+      background-color: #1C7C54;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .roundimg {
+      border-radius: 25px;
+    }
+
+    #footerimg {
+      width: 70%;
+    }

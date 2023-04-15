@@ -10,57 +10,293 @@
 
 <body>
 
-    <!-- Nav Bar, adapted from: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp-->
-    <div class="navbar">
-        <div class="header">
-            <a class="active" href="index.html">STRAWBERRY SEASON</a>
-        </div>
+    <div class="topbody">
+        <!-- Nav Bar, adapted from: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp-->
+        <div class="navbar">
+            <div class="header">
+                <a class="active" href="index.html"><b>STRAWBERRY SEASON</b></a>
+            </div>
 
-        <div class="header-right">
-            <div class="dropdown">
-                <button class="dropbtn">WEEKLY DIARY
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="resources/NM2207 Week 9 Submission.pdf">Week 9</a>
-                    <a href="diary/week10.html">Week 10</a>
-                    <a href="diary/week11.html">Week 11</a>
-                    <a href="storyboard/storyboard.html">Week 12</a>
+            <div class="header-right">
+                <div class="dropdown">
+                    <button class="dropbtn"><b>WEEKLY DIARY</b>
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="resources/NM2207 Week 9 Submission.pdf">Week 9</a>
+                        <a href="diary/week10.html">Week 10</a>
+                        <a href="diary/week11.html">Week 11</a>
+                        <a href="storyboard/storyboard.html">Week 12</a>
+                        <a href="resources/Final Writeup.pdf">Week 13</a>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- End of Nav Bar-->
+
+        <!-- Header -->
+        <div>
+            <img id="headerimg" src="resources/headerimg.png">
+        </div>
+        <!-- End of Header -->
+
+        <!-- Button to reveal text, adapted from https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp-->
+        <img id="seasoninfo" src="resources/seasoninfo.png">
+
+        <div class="revealbtn">
+            <button onclick="myFunction()"><b>WHAT?</b></button>
+        </div>
+
+        <div id="myDIV">
+            <h1><b>WHAT IS STRAWBERRY SEASON? 🍓 🍓 🍓 </b></h1>
+            <p>It's a delightful time of year when the fields are filled with luscious heart-shaped strawberries that
+                are irresistible due to their sweet and juicy flavor. The sweet scent of strawberries fills the air and
+                the sight of the bright red fruit peeking out from under the leaves is simply delightful. It's a time
+                when you can't help but feel a little giddy with excitement, knowing that you're about to indulge in
+                some of the freshest and most delicious strawberries available!</p>
+
+            <p>The strawberry season varies depending on the country and region. In cooler climates, such as the
+                northern hemisphere, the peak strawberry season typically occurs in late spring and early summer. This
+                is because strawberries require cool weather to grow, while also needing enough sunlight to ripen.
+                During this time, farmers and growers work diligently to ensure that their strawberries are harvested at
+                the perfect time by carefully monitoring weather, soil moisture, and the ripeness of the fruit. Once
+                harvested, the strawberries are packed and transported to local markets and grocery stores where
+                consumers eagerly await their arrival.</p>
+        </div>
+
+    </div>
+    </div>
+    <!-- End of Button -->
+
+    <div class="between">
+        <p>🍓<br><br>
+            🍓<br><br>
+            🍓<br>
+        </p>
+        <img id="worldheader" src="resources/worldheader.png">
     </div>
 
+    <!-- Slideshow container, adapted from https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+    <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="resources/mexico.jfif" style="width:70%">
+            <div class="text">Picking Strawberries in Mexico</div>
+        </div>
 
-    <div>
-        <img src="resources/headerimg.png">
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="resources/japan.jpg" style="width:70%">
+            <div class="text">Yokohama Strawberry Festival in Japan</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="resources/australia.jpeg" style="width:60%">
+            <div class="text">'The Big Strawberry' Statue and Cafe in Australia</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <!-- End of Slideshow -->
+
+
+    <!-- introduction -->
+    <div class="revealbtn">
+        <br><button onclick="secondBtn()"><b>BUT I LIVE IN SINGAPORE, WHAT DOES ANYTHING HAVE TO DO WITH
+                ME?</b></button>
     </div>
 
-    <div class="details">
-        <img id="self" src="resources/selfimg.png">
-        <h1>Hi!! My name is Ling and I love Strawberries!</h1>
-        <p>Strawberries have always been known as a world-wide popular fruit and is eaten in many different forms all
-            over the world. In Singapore, it is no different.</p>
-        
-        <p>Recently, Singapore has put in effort to grow our own strawberries in vertical farms. But is that enough
-            to provide for our growing population? And what are the possible impacts of growing our own strawberries?</p>
-        
-        <p>I set to find out where our strawberries are coming from and how consumption of strawberries affects
-            the economy of the world.
+    <div id="myDIV2">
+        <h1><b>SINGAPORE, STRAWBERRIES AND THE GLOBAL SCALE</b></h1>
+        <p>Singapore relies heavily on imported food, including strawberries, which are sourced from various countries.
+            If
+            there is a supply chain disruption or shortage of strawberries in one country, Singapore can usually find
+            alternative sources of supply to meet the demand for the fruit. However, various factors can affect the
+            availability and prices of strawberries in Singapore, including supply
+            and demand, weather conditions, and trade policies. Like any other country, the cost and availability of
+            strawberries in Singapore can be influenced by global and regional market forces. </p>
+
+        <p>For example, seasonal variations in supply and demand can impact the availability and prices of strawberries
+            in
+            Singapore. As strawberries are a seasonal crop, their availability and prices can vary depending on the time
+            of
+            year and the country of origin. During winter months, when strawberry production is limited in some
+            countries,
+            the demand for imported strawberries in Singapore may increase, leading to higher prices or shortages of the
+            fruit. Conversely, during peak strawberry season in countries like Australia, when there is an oversupply of
+            the
+            fruit, the prices of imported strawberries in Singapore may decrease.</p>
+
+        <p>Additionally, trade policies, such as import tariffs or restrictions on certain fruits, can affect the cost
+            and
+            availability of strawberries in Singapore. If a major supplier of strawberries to Singapore imposes an
+            import
+            tariff on the fruit, the prices of imported strawberries in Singapore may increase, making them less
+            affordable
+            for consumers. Similarly, if a country imposes restrictions on the import of strawberries due to safety or
+            phytosanitary concerns, the availability of strawberries in Singapore may decrease.</p>
+
+        <p>A real-life example of how market forces can affect the availability and prices of strawberries in Singapore
+            is
+            the shortage of strawberries in December 2020. This was due to a combination of factors, including seasonal
+            weather conditions, increased demand in other markets, and supply chain disruptions caused by the COVID-19
+            pandemic. As a result, the prices of strawberries in Singapore increased significantly, and consumers
+            reported
+            difficulties in finding fresh strawberries in supermarkets and online grocery platforms. To address the
+            shortage, retailers in Singapore turned to alternative sources of strawberries, including
+            countries like Australia and the United States, which were experiencing a peak in their strawberry season.
+            However, the higher cost of importing from these countries led to higher prices for consumers. The shortage
+            of
+            strawberries in Singapore also highlighted the country's dependence on imported food and the vulnerability
+            of
+            its food supply chain to global market forces.</p>
+    </div>
+    <!-- end of introduction -->
+
+    <div class="between">
+        <p><br>🍓<br><br>
+            🍓<br><br>
+            🍓<br><br>
+        </p>
+        <img src="resources/sgheader.png">
+    </div>
+
+    <!-- DATA/CHARTS -->
+    <div class="canvas-container">
+        <canvas id="kilochart"></canvas>
+        <p class="kilotext">
+            This bar graph illustrates the top 10 countries from which Singapore imported fresh strawberries in terms
+            of both value and quantity in 2020. The largest quantity came from the United States, with 1,406,000 Kg of
+            strawberries imported, followed by Korea with 1,067,010 Kg, and Australia with 563,170 Kg. Japan and New
+            Zealand had the smallest quantity of fresh strawberry imports, with 114,950 Kg and 70,830 Kg,
+            respectively.The graph highlights the significant role of these countries in supplying fresh
+            strawberries to Singapore, and the importance of their production to meet the demand of the Singaporean
+            market.</p>
+    </div>
+
+    <div class="canvas-container">
+        <canvas id="pieChart"></canvas>
+        <p class="kilotext">
+            This pie chart shows the monetary value of fresh strawberry imports to Singapore from the same top 10
+            countries. The
+            highest value of strawberry imports to Singapore came from Korea, with a total value of $15,028.48K,
+            followed by the United States with $12,954.54K. Australia, Japan, and New Zealand also exported fresh
+            strawberries to Singapore, with values of $3,561.94K, $3,111.92K, and $844.54K, respectively. It is
+            important to note that the monetary value of strawberry imports to Singapore can be influenced by a variety
+            of factors such as supply and demand, weather conditions, and trade policies, which can impact the prices
+            and availability of strawberries in the country.</p>
+    </div>
+
+    <div class="canvas-container">
+        <canvas id="bubble-chart"></canvas>
+        <p class="kilotext">
+            This bubble graph show trade value and quantity of strawberry exports from different countries to the
+            world(not just Singapore!), in
+            the year 2022. Mexico had the highest export value of $833,028.85 thousand and exported 201,604,000 kg of
+            strawberries. Spain was the second-largest exporter with a trade value of $733,197.24 thousand and
+            274,556,000 kg of strawberries. The United States ranked third, exporting strawberries worth $595,945.38
+            thousand and 146,996,000 kg of strawberries. The Netherlands, the European Union, Belgium, Greece, and Egypt
+            also exported large quantities of strawberries in terms of both trade value and quantity. The data indicates
+            that strawberries are a significant global commodity, and several countries are heavily involved in its
+            trade.</p>
+    </div>
+    </div>
+    <!-- End of Data/Charts-->
+
+    <!-- Closing comments-->
+    <div class="revealbtn">
+        <button onclick="thirdBtn()"><b>OK... BUT WHY DO WE NEED TO KNOW THIS?</b></button>
+    </div>
+
+    <div id="myDIV3">
+        <h1><b>STRAWBERRIES AND TRENDS</b></h1>
+        <p>Finding out the strawberry imports to Singapore can reveal the countries from which Singapore sources its
+            strawberries and the quantities imported from each country. This information can provide insights into the
+            supply
+            chain and food security of strawberries in Singapore, as well as the country's trade relations with the
+            strawberry-exporting countries. Additionally, analyzing the trends and patterns in strawberry imports to
+            Singapore
+            can help identify the factors that influence the availability and prices of strawberries in the country,
+            such as
+            seasonal variations, trade policies, and global market forces.</p>
+    </div>
+
+    <div class="between">
+        <p><br>🍓<br><br>
+            🍓<br><br>
+            🍓<br><br>
         </p>
     </div>
 
-    <div>
-        <button class="button">Let's Find Out!!</button><br><br><br><hr><br>
-    </div>
-    
-    <div id="canvas-container">
-    <canvas id="kilochart" width="1000" height="400"></canvas>
+    <div id="myDIV4">
+        <h1><b>SO WHAT IS SINGAPORE DOING?</b></h1>
+        <p>Singapore is not known for producing its own strawberries due to its tropical climate and limited land
+            availability.
+            However, the city-state is actively promoting sustainable agriculture and food security through various
+            initiatives,
+            including vertical farming, aquaponics, and rooftop gardening. These methods enable the cultivation of
+            vegetables
+            and herbs in urban areas, reducing Singapore's reliance on imported food. Its efforts in promoting
+            sustainable
+            agriculture and food security are significant steps towards achieving a more self-sufficient and sustainable
+            food
+            system.</p>
+
+        <p>Strawberries grown in a vertical farm in Singapore have made their debut, marking a milestone in the
+            country's
+            efforts to promote local food production. The strawberries are grown in a high-tech, indoor vertical farm
+            using
+            hydroponic technology, which allows plants to grow without soil. The farm, run by a local company called
+            Sustenir
+            Agriculture, is capable of producing up to 150kg of strawberries per month. The initiative is part of
+            Singapore's
+            larger push to promote sustainable agriculture and food security through innovative and technology-driven
+            methods of
+            food production. (source:
+            https://www.straitstimes.com/singapore/strawberries-grown-in-singapore-vertical-farm-make-debut)
+        </p>
     </div>
 
-    <div id="canvas-container">
-    <canvas id="volchart" width="1000" height="400"></canvas>
-   </div>
+    <!-- Gallery, adapted from https://www.w3schools.com/css/css_image_gallery.asp-->
+    <div class="parentgallery">
+        <div class="gallery">
+            <img class="roundimg" src="resources/one.jfif">
+            </a>
+            <div class="desc">Singaporean vertical farm grows fresh strawberries for the first time</div>
+        </div>
+
+        <div class="gallery">
+            <img class="roundimg" src="resources/two.png">
+            </a>
+            <div class="desc">Singapore's sustainable agriculture efforts extend to strawberry cultivation</div>
+        </div>
+
+        <div class="gallery">
+            <img class="roundimg" src="resources/three.png">
+            </a>
+            <div class="desc">Local strawberries hit the market in Singapore thanks to innovative farming methods</div>
+        </div>
+    </div>
+
+    <img id="footerimg" src="resources/footerimg.png">
+    </div>
+    <!-- End of Closing comments-->
+
+    <!-- button to top, adapted from -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <!-- end of button to top -->
 
 </body>
 
